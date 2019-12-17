@@ -1,0 +1,22 @@
+
+<form method="post">
+    {% csrf_token %}
+    <h1>PROFILE</h1>
+    <p>Username:<b>{{ post.username }}</b></p>
+    <p>Name :<b>{{ post.name}}</b></p>
+    <p>Father's name:<b>{{ post.fathers_name}}</b></p>
+    <p>Mother's name:<b>{{ post.mothers_name}}</b></p>
+    <p>Gender:<b>{{ post.gender}}</b></p>
+    <p>Place:<b>{{ post.place}}</b></p>
+    <p>Branch:<b>{{ post.branch}}</b></p>
+    <p>Btech(cgpa):<b>{{ post.cgpa_Btech}}</b></p>
+    <p>10 class(cgpa):<b>{{ post.class_10_cgpa}}</b></p>
+    <p>12 class(cgpa):<b>{{ post.class_12_percentage}}</b></p>
+    <p>Certifications count:<b>{{ post.certifications_count}}</b></p>
+    <p>Internship:<b>{{ post.internship}}</b></p>
+    <p>Languages:<b>{{ post.languages}}</b></p>
+    <p>sop:<b>{{ post.sop}}</b></p>
+    <p>dob:<b>{{ post.dob}}</b></p>
+    <input type="submit" value="send mail">
+
+</form>

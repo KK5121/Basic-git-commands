@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{%load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'campus/theme.css' %}" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.active
+{background-color: black;
+   padding-left: 5rem;
+    padding-right: 5rem;
+    color: #aba8a8;
+
+}
+
+.d{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-family: Helvetica Neue;
+    font-size: 1.5rem;
+    color: #aba8a8;
+}
+</style>
+
+<table class="topnav" >
+<tr>
+<td class="d">
+  <a class="active" href="http://127.0.0.1:8000/">Home</a>
+</td>
+<td class="d">
+    <a  class="active" href="http://127.0.0.1:8000/student/student_login/"  >Student login</a>
+</td>
+    <td class="d">
+        <a  class="active" href="http://127.0.0.1:8000/company/company_login/" >Company login</a>
+</td>
+<td class="d" style="padding-left: 7.23rem">
+    {% if user.is_authenticated %}
+
+        <a href="http://127.0.0.1:8000/logout/">Logout</a>
+
+{% else %}
+  <p >You are not logged in</p>
+    {% endif %}
+</td>
+</tr>
+</table>
+
+
+</head>
+<body>
+
+<h1 style="" class="display-4 border-warning text-muted mx-5 mb-4 pos1" >Campus Recruitment System</h1>
+
+
+<table class="pos3">
+    <tr>
+<td><a href="http://127.0.0.1:8000/student/student_login/ " class="btn btn-lg btn-primary mx-5 d-inline-flex "><b>STUDENT</b></a></td>
+<td><a href="http://127.0.0.1:8000/admin " class="btn btn-lg btn-primary mx-5 d-inline-flex"><b>ADMIN</b></a></td>
+<td><a href="http://127.0.0.1:8000/company/company_login/ " class="btn btn-lg btn-primary mx-5 d-inline-flex"><b>COMPANY</b></a></td>
+    </tr>
+</table>
+</body>
+</html>
